@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images.png">
+    <title>secret</title>  
+    <script>
+        function verificarResposta(event) {
+            // Previne o envio padrão do formulário
+            event.preventDefault();
+
+            // Obtém o valor da resposta do input
+            const resposta = document.querySelector('input[name="ar"]').value;
+
+            // Resposta correta em binário (decodificado seria "resposta e paraben")
+            const respostaCorreta = "ar";
+
+            // Verifica se a resposta está correta
+            if (resposta.trim().toLowerCase() === respostaCorreta) {
+                // Redireciona para a página parabens.html se a resposta estiver correta
+                window.location.href = 'ar.html';
+            } else {
+                // Mostra uma mensagem de erro se a resposta estiver incorreta
+                alert('Resposta incorreta, tente novamente.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Enigma</h1>
+    <div class="caixa">
+        <p>Eu sou algo que você pode segurar, mas não pode ver.
+        Eu posso encher um quarto ou apenas um lugar pequeno.
+        Eu posso ser suave ou feroz, mas sempre sou essencial.
+        O que sou eu?</p>
+    </div>
+    <div>
+        <form onsubmit="verificarResposta(event)">
+            <input type="text" name="ar" />
+            <input type="submit" value="Enviar" />
+        </form>
+    </div>
+</body>
+</html>

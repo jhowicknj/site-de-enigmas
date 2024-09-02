@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images.png">
+    <title>secret</title>
+    <script>
+        function verificarResposta(event) {
+            // Previne o envio padrão do formulário
+            event.preventDefault();
+
+            // Obtém o valor da resposta do input
+            const resposta = document.querySelector('input[name="parabens"]').value;
+
+            // Resposta correta em binário (decodificado seria "resposta e paraben")
+            const respostaCorreta = "parabens";
+
+            // Verifica se a resposta está correta
+            if (resposta.trim().toLowerCase() === respostaCorreta) {
+                // Redireciona para a página parabens.html se a resposta estiver correta
+                window.location.href = 'parabens.html';
+            } else {
+                // Mostra uma mensagem de erro se a resposta estiver incorreta
+                alert('Resposta incorreta, tente novamente.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Olá, jogador</h1>
+    <div class="caixa">
+        <p>
+            <br>descubra a resposta
+        <br>
+        <br>
+        01100001 00100000 01110010 01100101 01110011 01110000 01101111 01110011 01110100 01100001 00100000 01100101 00100000 01110000 01100001 01110010 01100001 01100010 01100101 01101110 01110011
+        </p>
+    </div>
+    <div>
+        <form onsubmit="verificarResposta(event)">
+            <input type="text" name="parabens" />
+            <input type="submit" value="Enviar" />
+        </form>
+    </div>
+</body>
+</html>

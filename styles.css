@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f8f8f8;
+}
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+.caixa {
+    width: 400px;
+    height: 150px;
+    background-color: #080808;
+    border: 2px solid #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8f8f8;
+}
+
+.input-resposta {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #303030;
+    border: 1px solid #000000;
+    color: #818181;
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o campo de texto e o botão */
+}
+
+/* Estilo do campo de texto */
+input[name="parabens"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input[name="ar"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input[name="muitobom"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input[name="boasorte"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+/* Estilo do botão de enviar */
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #383838;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo do botão de enviar ao passar o mouse */
+input[type="submit"]:hover {
+    background-color: #252525;
+}

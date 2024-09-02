@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images.png">
+    <title>secret</title>  
+    <script>
+        function verificarResposta(event) {
+            // Previne o envio padrão do formulário
+            event.preventDefault();
+
+            // Obtém o valor da resposta do input
+            const resposta = document.querySelector('input[name="muitobom"]').value;
+
+            // Resposta correta em binário (decodificado seria "resposta e paraben")
+            const respostaCorreta = "muitobom";
+
+            // Verifica se a resposta está correta
+            if (resposta.trim().toLowerCase() === respostaCorreta) {
+                // Redireciona para a página parabens.html se a resposta estiver correta
+                window.location.href = 'muitobom.html';
+            } else {
+                // Mostra uma mensagem de erro se a resposta estiver incorreta
+                alert('Resposta incorreta, tente novamente.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Descubra a mensagem na imagem</h1>
+    <div class="caixa3">
+       <img src="muitobom.png" hrel="muitobom">
+    </div>
+    <div>
+        <form onsubmit="verificarResposta(event)">
+            <input type="text" name="muitobom" />
+            <input type="submit" value="Enviar" />
+        </form>
+    </div>
+</html>
