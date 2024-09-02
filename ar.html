@@ -12,10 +12,10 @@
             event.preventDefault();
 
             // Obtém o valor da resposta do input
-            const resposta = document.querySelector('input[name="muitobom"]').value;
+            const resposta = document.querySelector('input[name="muito bom"]').value;
 
             // Resposta correta em binário (decodificado seria "resposta e paraben")
-            const respostaCorreta = "muitobom";
+            const respostaCorreta = "muito bom";
 
             // Verifica se a resposta está correta
             if (resposta.trim().toLowerCase() === respostaCorreta) {
@@ -31,11 +31,11 @@
 <body>
     <h1>Descubra a mensagem na imagem</h1>
     <div class="caixa3">
-       <img src="muitobom.png" hrel="muitobom">
+       <img src="muitobom.png" hrel="muito bom">
     </div>
     <div>
         <form onsubmit="verificarResposta(event)">
-            <input type="text" name="muitobom" />
+            <input type="text" name="muito bom" />
             <input type="submit" value="Enviar" />
         </form>
     </div>
